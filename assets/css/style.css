@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  color-scheme: #51e2f5, #9df9ef, #edf7f6, #ffa8B6, #a28089
+  
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.scores a {
+  color: black;
+
+}
+
+.scores a:visited {
+color: black;
+}
+
+.scores a:active {
+color: black;
+}

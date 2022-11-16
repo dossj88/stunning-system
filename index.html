@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link my css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Code Quiz</title>
+</head>
+
+<body>
+  <header>
+    <!-- adding score counter -->
+    <div id="score" class="scores">
+      <a onclick="getScore()" href=# title="View Scores">
+        <h3>View Scores</h3>
+      </a>
+    </div>
+    <!-- added timer -->
+    <div id="timer" class="time">
+      <h3>Time Left: <span id="timeLeft">0</span></h3>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div id="start" class="starter">
+      <div class="row">
+        <h2>The Code Quiz</h2>
+      </div>
+      <div class="row">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, obcaecati nam voluptatibus animi impedit
+          doloremque culpa fugit, tempora molestiae quasi nulla error modi quaerat a autem omnis necessitatibus illo
+          quibusdam?
+        </p>
+        <!-- added a button -->
+        <button onclick="start()" class="submit" title="Start Quiz"</button>
+      </div>
+    </div>
+    <div id="feedback" class="hide"></div>
+  </div>
+<!-- added js file -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
