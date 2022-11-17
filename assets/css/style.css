@@ -78,3 +78,16 @@ button, .score-button, .first-button, .choice-button, .submit-button, .next-butt
   color: var(--darksand);
  } 
 
+.initials {
+    background-color: var(--pink-sand);
+    border-radius: 25px;
+    border-color: var(--darksand);
+    margin: 10px;
+    padding: 10px, 5px;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    appearance: none;
+color: var(--charColor);
+}

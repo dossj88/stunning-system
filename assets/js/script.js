@@ -1,3 +1,9 @@
+var score = 0;
+var nextQuestion = -1; 
+// var timeLeft = 0;
+// var timer;
+var feedbackEl = document.querySelector("#feedback");
+
 // add questions
 
 const questions = [
@@ -8,21 +14,21 @@ const questions = [
   },
 
   {
-    question: "How to declare a function?",
+    question: "How do you declare a function?",
     choices:["var function = function()", "Function name()", "Method function = ()", "class = Function()"],
     answer:"Function name()"
   },
 
   {
-    question:"How do we us 'and' in a boolean?",
+    question:"How do we use 'and' in a boolean?",
     choices:["||", "&", "&&", "*"],
     answer:"&&"
   },
 
   {
     question:"Inside what part of HTML do you put JavaScript?",
-    choices:["<link>", "<header>", "<meta>", "<script>"],
-    answer:"<script>"
+    choices:["link", "header", "meta", "script"],
+    answer:"script"
   },
 
   {
@@ -32,16 +38,10 @@ const questions = [
   },
 ]
 
-var score = 0;
-var nextQuestion = -1; 
-var timeLeft = 0;
-var timer;
-var feedbackEl = document.querySelector("#feedback");
-
 // added function to start quiz
 
 function start() {
-  timeLeft = 50;
+  timeLeft = 100;
   document.getElementById("timeLeft").innerHTML=timeLeft + "seconds";
 
   timer = setInterval(function() {
@@ -54,6 +54,7 @@ quizOver();
   }
 },1000);
 
+ nextNewQuestion();
 
 }
 
@@ -63,7 +64,7 @@ function quizOver() {
 
       var finalDetails = `
     <h2>Great job!</h2>
-    <p>Your final score is ` + totalScore + `!</p>
+    <p>Your final score is ` + score + `!</p>
     <p>Please enter your initials to submit your score in the score chart.</p>
     <input type="text" id="MVP" class="initials" maxlength="3" required>
     <button onclick="saveScore()" class="score-button" title="Submit score">Submit</button>`;
@@ -84,7 +85,7 @@ function getScore() {
     <h2>` + localStorage.getItem("MVP") + `'s score is:</h2>
     <h1>` + localStorage.getItem("score") + `</h1><br >
     <button onclick="clearScore()" class="clear-button" title = "Clear Score and Play Again!">Clear Score and Play Again!</button>
-    <button onclick="resetGame()" class="reset-button" title = "Just Play Again!">Just Play Again!</button>
+    <button onclick="resetGame()" class="reset-button" title = "Just Play Again!">Play Again!</button>
     `;
     document.getElementById("start").innerHTML = finalDetails;
 }
@@ -112,7 +113,7 @@ function resetGame() {
 }
 
 function correctAnswer() {
-    totalScore += 40;
+    score += 40;
 
     feedbackEl.textContent = "CORRECT! That was the right answer: " + questions[nextQuestion].answer;
     feedbackEl.style.color = "green";
@@ -156,7 +157,7 @@ function nextNewQuestion() {
         return;
     }
 
-    var finalDetails = "<h2>" + questions[nextQuestion].questionTitle + "</h2>"
+    var finalDetails = "<h2>" + questions[nextQuestion].question + "</h2>"
 
     for (var i = 0; i < questions[nextQuestion].choices.length; i++) {
         var choiceButton = "<button onclick = \"[answerchoice]\">[CHOICE]</button>";
@@ -168,5 +169,5 @@ function nextNewQuestion() {
             }
         finalDetails += choiceButton
     }
-        document.getElementById("start").innerHTML = finalQuizDetails;
+        document.getElementById("start").innerHTML = finalDetails;
 }
