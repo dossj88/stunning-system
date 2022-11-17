@@ -3,10 +3,22 @@
   box-sizing: border-box;
   
 }
+/* added root for colors */
+:root {
 
+  --main: #51e2f5;
+  --blue-green: #9df9ef;
+  --charColor: #edf7f6;
+  --pink-sand: #ffa8b6;
+  --darksand: #a28089;
+}
+
+/* added unique font from Google.*/
 body {
-  color-scheme: #51e2f5, #9df9ef, #edf7f6, #ffa8B6, #a28089
-  
+  background-color: var(--main);
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+ color: var(--charColor); 
 }
 
 header {
@@ -16,14 +28,48 @@ header {
 }
 
 .scores a {
-  color: black;
+  color: var(--charColor);
 
 }
 
 .scores a:visited {
-color: black;
+color: var(--charColor);
 }
 
 .scores a:active {
 color: black;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+p {
+  padding: 20px;
+  
+}
+
+button, .score-button, .first-button, .button-choice, .submit-button, .next-button, .reset-button,
+.clear-button {
+  background-color:#edf7f6;
+  border-color:#ffa8B6 ;
+  border-radius: 25px;
+  border-width: 3px;
+  font-size: 25px;
+  appearance: none;
+}
+
+button: :hover
