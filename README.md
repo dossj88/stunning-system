@@ -6,17 +6,21 @@ This is a quiz about JavaScript consisting of 5 multiple choice questions. This 
 
 ## Usage
 
-[start page](assets/images/1.png),
+![start page](assets/images/1.png)
 
-[first question](assets/images/2.png),
+![first question](assets/images/2.png)
 
-[second question](assets/images/3.png),
+![second question](assets/images/3.png)
 
-[third question](assets/images/4.png),
+![third question](assets/images/4.png)
 
-[fourth question](assets/images/5.png),
+![fourth question](assets/images/5.png)
 
-[fifth question](assets/images/6.png),
+![fifth question](assets/images/6.png)
+           
+![sixth question](assets/images/7.png)
 
-[sixth question](assets/images/7.png)
+## Website Link
+
+ https://dossj88.github.io/stunning-system/
 
